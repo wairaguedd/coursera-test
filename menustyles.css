@@ -18,71 +18,82 @@ h1{
 }
 
 
-div{
-	height: 200px;
-	border: solid black; 
-	margin-right: 5px;
-	margin-bottom: 20px;
-	background-color: grey;
-	font-size: 1.25em;
-	float: left;
-	overflow: hidden;
-	position: relative;
-	clear: right;
-	
+section {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  font-size: 125%;
+  text-align: right;
+  display: inline-block;
+  padding: 2px;
+  }
+
+.column {
+  width: 33.3%;
+  float: left;
+  padding: 25px;
+  position:relative;
+}
+
+.div1 {
+  height: 200px; 
+  margin: 0% ; 
+  overflow: hidden;
+  background-color: grey;
+  border: solid 1px;
+  position: relative;
+}
+
+#sec1 {
+  background-color: red;
+  border-left: solid 1px black;
+  border-bottom: solid 1px black;
+}
+
+#sec2 {
+  background-color: blue;
+  border-bottom: solid 1px black;
+  border-left: solid 1px black;
+}
+
+#sec3 {
+  background-color: pink;
+  border-left:solid 1px black;
+  border-bottom:solid 1px blue;
+  
 }
 
 
-#s1{
-	float: right;
-	border: solid black;
-	background-color: red;
-	margin: 0px;
-	height: 50px;
-	width: 100px;
-	padding: 5px;
-
-
-}
-
-#s2{
-	float: right;
-	border: solid black;
-	background-color: blue;
-	margin: 0px;
-	height: 50px;
-	width: 100px;
-	padding: 5px;
-
-}
-
-#s3{
-	float: right;
-	border: solid black;
-	background-color: pink;
-	margin: 0px;
-	height: 50px;
-	width: 100px;
-	padding: 5px;
-
+div p {
+  padding: 10px
 }
 
 
-@media (min-width: 992px){
-	div{
-		width: 33%;	
-	}
 
+@media (max-width: 992px) {
+.column {
+}
+  }
+
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+.column {
+width:50%;
+  }
 }
 
-@media(min-width: 768px and max-width: 991px){
-	div{
-		width: 50%
-	}
+@media (min-width: 768px) and (max-width: 991px) {
+#column3 {
+width:100%;
+  }
+}
 
+@media (max-width: 767px) {
+    .column {   
+        width: 100%;
+        float:none;
+    }
 }
-@media(max-width: 767px) {
-	div{
-		width: 100%;
-	}
-}
+
+
